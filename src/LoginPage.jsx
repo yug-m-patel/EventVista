@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 function LoginPage() {
     const [email, setEmail] = useState("");
@@ -69,9 +70,9 @@ function LoginPage() {
                                 Forgot Password?
                             </a>
                         </div>
-                        <button type="submit" className="w-full p-2 rounded" style={{ backgroundColor: '#333', color: '#fff' }}>
+                        <NavLink to='/home' className="w-full p-2 rounded block text-center" style={{ backgroundColor: '#333', color: '#fff' }}>
                             Login
-                        </button>
+                        </NavLink>
                         <button type="button" className="w-full border p-2 rounded flex items-center justify-center" style={{ borderColor: '#333', color: '#333' }}>
                             <MailIcon />
                             <span className="ml-2">Login with Gmail</span>
@@ -79,9 +80,9 @@ function LoginPage() {
                     </form>
                     <div className="mt-4 text-center text-sm" style={{ color: '#333' }}>
                         Don't have an account?{" "}
-                        <a href="/signup" className="font-medium" style={{ color: '#007BFF', textDecoration: 'underline' }}>
+                        <NavLink to="/signup" className="font-medium" style={{ color: '#007BFF', textDecoration: 'underline' }}>
                             Sign Up
-                        </a>
+                        </NavLink>
                     </div>
                 </div>
             </div>

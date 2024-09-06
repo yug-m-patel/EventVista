@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 function SignupPage() {
   const [selectedFields, setSelectedFields] = useState([]);
@@ -173,7 +174,7 @@ function SignupPage() {
             )}
           </form>
           <div className="mt-4 text-center text-sm" style={{ color: '#333' }}>
-            Already have an account? <a href="/login" style={{ color: '#007BFF', textDecoration: 'underline', cursor: 'pointer' }}>Sign In</a>
+            Already have an account? <NavLink to='/login' style={{ color: '#007BFF', textDecoration: 'underline', cursor: 'pointer' }}>Sign In</NavLink>
           </div>
         </div>
       </div>

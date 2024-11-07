@@ -14,7 +14,7 @@ app.use("/api", routes)
 // create a route in route folder
 // use route as middleware
 dotenv.config();
-const port = process.env.PORT || 3000;
+const port = 3000;
 
 app.post('/upload', upload.single('image'), async (req, res) => {
     const localFilePath = req.file.path;

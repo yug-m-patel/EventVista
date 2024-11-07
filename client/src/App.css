@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --primary-dark-blue: #002855;
+    --primary-bright-blue: #005B96;
+    --primary-light-blue: #99CCFF;
+    --secondary-teal: #008080;
+    --secondary-light-green: #A9DFBF;
+    --secondary-yellow: #FFDD57;
+    --neutral-white: #FFFFFF;
+    --neutral-light-grey: #F5F5F5;
+    --neutral-dark-grey: #4A4A4A;
+    --neutral-black: #000000;
+    --accent-orange: #FF851B;
+    --accent-red: #FF4136;
+  }
+  
+  body {
+    background-color: var(--neutral-light-grey);
+    color: var(--neutral-dark-grey);
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  header, footer {
+    background-color: var(--primary-dark-blue);
+    color: var(--neutral-white);
+  }
+  
+  .button-primary {
+    background-color: var(--primary-bright-blue);
+    color: var(--neutral-white);
+  }
+  
+  .button-secondary {
+    background-color: var(--secondary-teal);
+    color: var(--neutral-white);
+  }
+  
+  .accent {
+    color: var(--accent-orange);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    color: var(--primary-dark-blue);
+  }
+  
+  button, a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: var(--neutral-white);
+    background-color: var(--primary-bright-blue);
+  }
+  
+  input, label {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--neutral-dark-grey);
+  }
+html{
+  scroll-behavior: smooth;
+}

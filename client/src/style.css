@@ -1,0 +1,38 @@
+/* styles.css */
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #F5F5F5;
+  color: #4A4A4A;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+  color: #002855;
+}
+
+button, a {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  color: #FFFFFF;
+  background-color: #005B96;
+}
+
+input, label {
+  font-family: 'Open Sans', sans-serif;
+  color: #4A4A4A;
+}
+
+:root {
+  --primary-dark-blue: #002855;
+  --primary-bright-blue: #005B96;
+  --background-light: #F5F5F5;
+  --text-dark: #4A4A4A;
+}
+
+.about-us-container {
+  background-color: rgb(90, 6, 168);
+  background: url('./assets/images/About\ us.jpg') no-repeat center center/cover !important;
+}
+
+
+/* Add other styles here */

@@ -47,7 +47,7 @@ const ProfilePage = () => {
         const userId = decodedToken.data.UserId; // Extract the userId from the token
         console.log('UserId:', userId); // Log the userId to verify
 
-        const response = await axios.get(`http://localhost:5217/profile/${userId}`);
+        const response = await axios.get(`https://eventvista.onrender.com/profile/${userId}`);
         setProfileData(response.data.data);
 
       } catch (error) {

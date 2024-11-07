@@ -94,7 +94,7 @@
 //   // useEffect(() => {
 //   //   const fetchEvents = async () => {
 //   //     try {
-//   //       const response = await axios.get('http://localhost:5217/api/event/fetch'); // Adjust the URL as needed
+//   //       const response = await axios.get('https://eventvista.onrender.com/api/event/fetch'); // Adjust the URL as needed
 //   //       const backendEvents = response.data.map(event => ({
 //   //         name: event.EventTitle,
 //   //         date: event.Date,
@@ -235,7 +235,7 @@ const EventPage = () => {
 
   const fetchEvents = async () => {
     try {
-      const response = await axios.get('http://localhost:5217/api/event/fetch');
+      const response = await axios.get('https://eventvista.onrender.com/api/event/fetch');
       console.log(response + "res data");
       
       setEvents(response.data.data);

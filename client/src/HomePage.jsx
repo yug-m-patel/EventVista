@@ -310,7 +310,7 @@ export default function HomePage() {
 
 //   const fetchEvents = async () => {
 //     try {
-//       const response = await axios.get('http://localhost:5217/api/event/fetch');
+//       const response = await axios.get('https://eventvista.onrender.com/api/event/fetch');
 //       const eventsData = response.data.data;
 //       setEvents(eventsData);
 //       setMainEvent(eventsData[0]); // Assuming the first event is the main event

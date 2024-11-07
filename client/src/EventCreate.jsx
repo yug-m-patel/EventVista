@@ -7,7 +7,7 @@ import Sidebar from "./Sidebar";
 import axios from 'axios';
 
 const axiosClient = axios.create({
-  baseURL: 'http://localhost:5217/api'
+  baseURL: 'https://eventvista.onrender.com/api'
 });
 
 export default function EventCreate() {
@@ -21,7 +21,7 @@ export default function EventCreate() {
   };
   let initialEvents = [];
   const fetchEvents = async () => {
-    const response = await axios.get('http://localhost:5217/api/event/fetch')
+    const response = await axios.get('https://eventvista.onrender.com/api/event/fetch')
     if (response.data && response.data.status) {
       // console.log(response.data.data)
       initialEvents = response.data.data
@@ -34,7 +34,7 @@ export default function EventCreate() {
   //   let isMounted = true;
   //   const fetchEvents = async () => {
   //     try {
-  //       const response = await fetch('http://localhost:5217/api/event/fetch');
+  //       const response = await fetch('https://eventvista.onrender.com/api/event/fetch');
   //       const data = await response.json();
   //       if (isMounted) {
   //         setEvents(data);
@@ -234,7 +234,7 @@ export default function EventCreate() {
   
       try {
         if (file) {
-          const response = await axios.post('http://localhost:5217/upload', formData, {
+          const response = await axios.post('https://eventvista.onrender.com/upload', formData, {
             headers: {
               'Content-Type': 'multipart/form-data'
             }
@@ -249,7 +249,7 @@ export default function EventCreate() {
       
       try {
         if (editingEvent) {
-          await axiosClient.patch(`http://localhost:5217/api/event/update/${editingEvent._id}`, formattedEvent);
+          await axiosClient.patch(`https://eventvista.onrender.com/api/event/update/${editingEvent._id}`, formattedEvent);
           setEvents(
             events.map((event) =>
               event._id === editingEvent._id ? { ...editingEvent, ...newEvent } : event
@@ -257,7 +257,7 @@ export default function EventCreate() {
           );
           setEditingEvent(null);
         } else {
-          const response = await axios.post('http://localhost:5217/api/event/create', formattedEvent);
+          const response = await axios.post('https://eventvista.onrender.com/api/event/create', formattedEvent);
           setEvents([...events, response.data]);
         }
         
@@ -312,7 +312,7 @@ export default function EventCreate() {
   const handleDelete = async (e, event) => {
     e.preventDefault();
     try {
-      await axios.delete(`http://localhost:5217/api/event/delete/${event._id}`);
+      await axios.delete(`https://eventvista.onrender.com/api/event/delete/${event._id}`);
       
       setEvents(event.filter((ev) => ev._id !== event._id));
       console.log("Event deleted successfully.");

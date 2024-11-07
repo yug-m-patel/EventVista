@@ -10,7 +10,7 @@ function SignupPage() {
   const handleSignup = async () => {
     console.log("hit line 10")
     // e.preventDefault();
-      axios.post('http://localhost:5217/api/user/signup', {
+      axios.post('https://eventvista.onrender.com/api/user/signup', {
         Name,
         Department,
         Year,

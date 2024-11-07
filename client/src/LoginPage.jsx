@@ -9,7 +9,7 @@ function LoginPage({ setAuth }) {
     const handleLogin = async (e) => {
         e.preventDefault();
 
-        axios.post('http://localhost:5217/api/user/login', { Email, Password }).then((res)=>{
+        axios.post('https://eventvista.onrender.com/api/user/login', { Email, Password }).then((res)=>{
             if(res.status===200){
                 console.log("Login successful", res.data);
                 localStorage.setItem('token', res.data.AccessToken);

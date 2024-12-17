@@ -253,12 +253,12 @@ const EventPage = () => {
   };
 
   const filterCategory = (category) => {
-    const filtered = category === 'all' ? events : events.filter((event) => event.Type === category);
+    const filtered = category === 'all' ? events : events.filter((event) => event.Type.toLowerCase() == category);
     setFilteredEvents(filtered);
   };
 
   const filterDepartment = (department) => {
-    const filtered = department === 'all' ? events : events.filter((event) => event.Department === department);
+    const filtered = department === 'all' ? events : events.filter((event) => event.Department.toLowerCase() == department);
     setFilteredEvents(filtered);
   };
 

@@ -403,10 +403,10 @@ export default function EventCreate() {
                 className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-400 transition-all"
               >
                 <option value="">Select type</option>
-                <option value="Conference">Conference</option>
+                <option value="hackathon">Hacakthon</option>
                 <option value="Workshop">Workshop</option>
                 <option value="Seminar">Seminar</option>
-                <option value="Webinar">Webinar</option>
+                <option value="sport">Sports</option>
                 <option value="custom">Custom</option>
               </select>
               {errors.type && <p className="text-red-500 text-sm mt-1">{errors.type}</p>}

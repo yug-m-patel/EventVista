@@ -29,10 +29,10 @@ const Filters = ({ filterCategory, filterDepartment, toggleOnline, togglePaid })
         <InputLabel>Category</InputLabel>
         <Select label='Category' onChange={(e) => filterCategory(e.target.value)} defaultValue="all">
           <MenuItem value="all">All</MenuItem>
-          <MenuItem value="workshops">Workshops</MenuItem>
-          <MenuItem value="seminars">Seminars</MenuItem>
-          <MenuItem value="sports">Sports</MenuItem>
-          <MenuItem value="hackathons">Hackathons</MenuItem>
+          <MenuItem value="workshop">Workshops</MenuItem>
+          <MenuItem value="seminar">Seminars</MenuItem>
+          <MenuItem value="sport">Sports</MenuItem>
+          <MenuItem value="hackathon">Hackathons</MenuItem>
         </Select>
       </FormControl>
       <FormControl fullWidth style={{ marginBottom: 20 }}>

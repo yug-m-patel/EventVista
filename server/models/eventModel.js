@@ -9,7 +9,7 @@ const eventSchema = new mongoose.Schema({
     Type: {
         type: String,
         required: true,
-        enum: ['Webinar', 'Seminar', 'Technical', 'non-technical', 'sports', 'custom']
+        // enum: ['Webinar', 'Seminar', 'Technical', 'non-technical', 'sports', 'custom']
     },
     CustomType: { type: String },
     Department: { type: String, required: true },
@@ -26,7 +26,7 @@ const eventSchema = new mongoose.Schema({
 eventSchema.pre('save', function (next) {
     if (this.Date) {
         // Use 'this' to refer to the current document being saved
-        this.Date = moment(this.Date).format('DD-MM-YYYY');
+        this.Date = moment(this.Date).format('YYYY-MM-DD');
     }
     next(); // Call next() to continue the save process
 });
